@@ -11,12 +11,7 @@
     "./icon": "./icon.svg"
   },
   "files": [
-    "lib/index.js",
-    "lib/qr.js",
-    "lib/bridge.js",
-    "lib/channel.js",
-    "lib/store.js",
-    "lib/weixin.js",
+    "lib",
     "client.js",
     "cordis.patch.yml",
     "locale/*.json",
