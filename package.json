@@ -17,6 +17,9 @@
     "lib/channel.js",
     "lib/store.js",
     "lib/weixin.js",
+    "lib/agents.js",
+    "lib/coexist.js",
+    "lib/allowlist.js",
     "client.js",
     "cordis.patch.yml",
     "locale/*.json",
@@ -40,14 +43,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Huangzihengcmd/dsh-wechat-assistant.git"
+    "url": "git+https://github.com/patrickstar231/dsh-wechat-assistant.git"
   },
-  "homepage": "https://github.com/Huangzihengcmd/dsh-wechat-assistant#readme",
+  "homepage": "https://github.com/patrickstar231/dsh-wechat-assistant#readme",
   "bugs": {
-    "url": "https://github.com/Huangzihengcmd/dsh-wechat-assistant/issues"
+    "url": "https://github.com/patrickstar231/dsh-wechat-assistant/issues"
   },
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=24.9.0"
   },
   "dsh": {
     "bundle": { "patch": "./cordis.patch.yml" },
@@ -56,7 +59,7 @@
       "immediately": true,
       "inject": [
         "@deepseek-ai/dsh-client-ui-settings",
-        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-renderer",
         "@deepseek-ai/dsh-client-locale"
       ]
     }

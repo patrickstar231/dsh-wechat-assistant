@@ -21,12 +21,12 @@ A DeepSeek Harness (DSH) plugin that bridges your WeChat account to the agent ru
 ### 从 GitHub 安装（推荐）
 
 ```bash
-dsh plugin add Huangzihengcmd/dsh-wechat-assistant
+dsh plugin add patrickstar231/dsh-wechat-assistant
 ```
 
 ### 在 DSH 界面里
 
-Plugins 页面 → 添加插件 → 填入仓库地址 `Huangzihengcmd/dsh-wechat-assistant`。
+Plugins 页面 → 添加插件 → 填入仓库地址 `patrickstar231/dsh-wechat-assistant`。
 
 ## 使用
 
@@ -125,7 +125,11 @@ token 只保存在本机（`<DSH_HOME>/wechat-assistant/coexist.json`，权限 0
 
 ## 兼容性
 
-需要 DSH `>=0.2.1-rc.5`（`ctx.agents.create/resume`、`agent.followup()`、`agent.whenIdle()`、`settings.section` 槽位）。
+需要 DSH `>=0.2.2-rc.3`（`ctx.agents.create/resume`、`agent.followup()`、`agent.whenIdle()`、`agentPresets.mount()`、`settings.section` 槽位；Client 侧的 `ctx.slots` 由 `@deepseek-ai/dsh-client-ui-renderer` 提供）。
+
+### 微信群聊
+
+**不支持。** 微信 ClawBot / iLink 协议的 bot 账号无法被加入微信群，`getupdates` 不会把群消息下发到本插件；出站 `sendmessage` 也没有群收件字段。这是平台与协议层的限制，仅修改本插件代码无法实现群聊。
 
 ## 许可证
 
